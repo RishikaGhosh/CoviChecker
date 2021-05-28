@@ -1,0 +1,109 @@
+#title{
+  background-color: #E9EAF7;
+}
+/* Navbar */
+.navbar-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:300;
+}
+.btn{
+  margin-right: 30px;
+}
+.content{
+  margin-left: 960px;
+}
+.ncontent{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.n-resources{
+  margin-left: 0px;
+}
+/* Main Title */
+h1{
+  font-size: 100px;
+  padding-left: 100px;
+  padding-top: 100px;
+  font-family:'Montserrat',sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+
+}
+h2{
+  padding-left: 115px;
+  font-family: 'Open Sans', sans-serif;
+  font-size:25px;
+
+}
+/* Illustrations-front page */
+.doctor-images1{
+  width: 200px;
+  height: 300px;
+  margin-bottom: 50px;
+}
+.doctor-images2{
+  width: 200px;
+  height: 300px;
+}
+.doctor-images3{
+  width: 200px;
+  height: 300px;
+  padding-left: 100px;
+  padding-bottom: 25px;
+}
+.images{
+  margin-left: 750px;
+  margin-top: 30px;
+}
+.typewrite-data{
+  font-family:'Montserrat',sans-serif;
+  color:#000;
+}
+/* front page login sign up buttons */
+.btn-dark{
+  margin-left: 115px;
+  margin-top:10px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.btn-outline-dark{
+  margin-top:10px;
+}
+/* carosel */
+#Guideline-Carosel{
+  background-color: #fff;
+  color:#000;
+}
+.Guideline-text{
+  padding-top: 100px;
+  padding-left: 570px;
+  padding-bottom: 50px;
+}
+.Guideline-image{
+  padding-left: 400px;
+  height: 400px;
+  margin-bottom: 100px;
+}
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+/* footer */
+ #footer{
+  background-color: #E9EAF7;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.social-icon{
+  padding: 1%;
+}
