@@ -1,0 +1,21 @@
+body{
+  background-color: #e9eaf7;
+}
+.signupimage{
+  width:294px;
+  height: 314;
+}
+.signup-content{
+  border-radius: 25px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15),
+              0 2px 2px rgba(0,0,0,0.15),
+              0 4px 4px rgba(0,0,0,0.15),
+              0 8px 8px rgba(0,0,0,0.15);
+  margin-top:150px;
+  background-color: #fff;
+}
+.input-box{
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+}
