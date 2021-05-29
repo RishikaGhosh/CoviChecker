@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600&family=Open+Sans:wght@300&family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
   <!-- css stylesheet -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/parameters.css">
+  <link rel="stylesheet" href="css/resources.css">
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/02c31ebc15.js" crossorigin="anonymous"></script>
   <title>Resources</title>
@@ -58,13 +58,25 @@
       </nav>
     </div>
   </section>
-  <section id="search">
+  <!-- <section id="search">
+    <h1>Resources</h1>
     <div class="search-input">
       <div class="search-box">
         <input id="cityname" type="text" class="validate">
         <label for="cityname"><i class="fas fa-search"></i>Enter your city name</label><br>
       </div>
       <button id="search-btn" type="button" class="btn btn-dark ">search</button>
+    </div>
+  </section> -->
+  <section id="search">
+    <div class="search-input">
+      <div class="form-outline">
+        <input id="cityname" type="search" class="form-control" />
+        <label class="form-label" for="cityname"></label>
+      </div>
+      <button id="search-btn" type="button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
   </section>
   <script>
@@ -74,7 +86,7 @@
 
     let button = document.getElementById("search-btn").onclick = function() {
       cityname = document.getElementById("cityname").value;
-      url = "https://twitter.com/search?q=verified+" + cityname + "+%28bed+OR+beds+OR+icu+OR+oxygen+OR+ventilator+OR+ventilators+OR+fabiflu%29+-%22not+verified%22+-%22unverified%22+-%22needed%22+-%22required%22&f=live";
+      url = "https://twitter.com/search?q=verified+" + cityname + "+%20(beds%20OR%20oxygen%20OR%20plasma%20OR%20icu%20OR%20ventilator%20OR%20Remdesivir)&src=typed_query&f=live";
 
       //console.log(url)
       open(url);
