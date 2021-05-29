@@ -84,6 +84,12 @@ h2{
   height: 400px;
   margin-bottom: 100px;
 }
+.carousel-image-1{
+  padding-left: 400px;
+}
+.carousel-image-2{
+  padding-left: 350px;
+}
 .carousel-control-prev-icon:after {
   content: '<';
   font-size: 20px;
@@ -132,4 +138,30 @@ h2{
 }
 body{
   background-color: #E9EAF7;
+}
+.heading{
+  font-size: 5rem;
+  margin-left: 450px;
+  margin-bottom: 50px;
+}
+.table{
+  width:700px;
+  background-color:#fff;
+  margin-left: 400px;
+  margin-right: 500px;
+}
+.submit{
+  margin-top: 50px;
+  margin-left: 700px;
+}
+.tableheading{
+  font-weight: 600;
+}
+.submit1{
+  padding-left:30px;
+  padding-right: 30px;
+  margin-top: 50px;
+  margin-left: 700px;
+  margin-bottom: 100px;
+  font-weight: 900;
 }

@@ -109,6 +109,10 @@ app.get("/welcome" ,function(req ,res){
     res.sendFile(__dirname + "/HTML/covicheck-main/welcome.html");
 });
 
+app.get("/resource",function(req ,res){
+    res.sendFile(__dirname + "/HTML/covicheck-main/resources.html");
+});
+
 app.get("/parameter" ,function(req ,res){
     res.sendFile(__dirname + "/HTML/covicheck-main/parameters.html");
 });
@@ -144,7 +148,6 @@ app.post("/parameter", function(req, res){
       pressure: req.body.pressure
     });
     param.save().then(() => console.log("Parameters added successfully"));
-    // console.log(param.date,param.time,param.pulse,param.oxygen,param.temp,param.pressure);
     res.redirect("/logs");
 });
 
@@ -158,7 +161,6 @@ app.get("/home" ,function(req ,res){
         else
         {
             MedPosts = Posts;
-            // console.log(MedPosts);
             res.render("home",{
                 MedPosts: MedPosts
                 });
@@ -177,7 +179,6 @@ app.post("/compose", function(req, res){
       title: req.body.medicineName,
       content: req.body.time
     });
-    // console.log(post.title,post.content);
     post.save().then(() => console.log("Medicines added successfully"));
     res.redirect("/home");
 });
