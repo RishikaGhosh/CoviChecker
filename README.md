@@ -1,5 +1,5 @@
 
 # CoviChecker
 ## Introduction
-View our website here:
+View our deployed application here:https://covi-checker.herokuapp.com/
 
