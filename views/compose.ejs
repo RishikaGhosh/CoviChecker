@@ -1,17 +1,16 @@
 
+
 <%- include("partials/header"); -%>
 
 
-    <h1>Compose</h1>
+    <h2 class="compose">Add Your Meds</h2>
     <form class="" action="/compose" method="post">
       <div class="form-group">
-        <label>Medicine Name</label>
-        <input class="form-control" type="text" name="medicineName">
-        <label>Time</label>
-        <input id="appt-time" type="time" name="time">
+        <label class="med-name">Medicine Name:</label><input class="box form-control" type="text" name="medicineName">
+        <label class="med-name">Time:</label>
+        <br />
+        <input class="box2" id="appt-time" type="time" name="time">
       </div>
-      <button class="btn btn-primary" type="submit" name="button">Add</button>
+      <button class="compose-submit btn btn-dark" type="submit" name="button">Add</button>
     </form>
 
-    
-<%- include("partials/footer"); -%>
