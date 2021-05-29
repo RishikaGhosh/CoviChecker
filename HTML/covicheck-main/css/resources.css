@@ -1,5 +1,27 @@
+body{
+  background-color: #E9EAF7;
+  text-align: center;
+}
+h1{
+  margin-top: 100px;
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+}
 .form-control{
   width:500px;
-  margin-top: 150px;
-  margin-left: 470px;
+  margin-top: 30px;
+  margin-left: 530px;
+  margin-bottom: 30px;
+}
+#search-btn{
+  padding-left: 25;
+  padding-right: 25;
+}
+.Important{
+  margin-top: 50px;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+.content{
+  margin-left: 960px;
 }

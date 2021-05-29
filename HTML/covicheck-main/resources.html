@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -35,10 +37,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto content">
             <li class="nav-item active">
-              <a class="nav-link ncontent" href="#">View Logs <span class="sr-only">(current)</span></a>
+              <a class="nav-link ncontent" href="/logs">View Logs <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link n-resources" href="#">Resources</a>
+              <a class="nav-link n-resources" href="/resouce">Resources</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link n-resources" href="/home">Medicines</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link n-resources" href="/parameter">Parameters</a>
             </li>
             <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,33 +59,28 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <!-- <form class="form-inline my-2 my-lg-0">
             <a href="signup&loginpage/signup.html" class="btn btn-outline-light btn-lg" type="button">Get Started</a>
-          </form>
+          </form> -->
         </div>
       </nav>
     </div>
   </section>
-  <!-- <section id="search">
+  <section id="search">
     <h1>Resources</h1>
     <div class="search-input">
       <div class="search-box">
-        <input id="cityname" type="text" class="validate">
-        <label for="cityname"><i class="fas fa-search"></i>Enter your city name</label><br>
+        <div class="form-group">
+          <input id="cityname" type="text" id="form1" class="form-control" placeholder="Enter your city name">
       </div>
-      <button id="search-btn" type="button" class="btn btn-dark ">search</button>
+      <button id="search-btn" type="button" class="btn-dark btn-lg ">search</button>
     </div>
-  </section> -->
-  <section id="search">
-    <div class="search-input">
-      <div class="form-outline">
-        <input id="cityname" type="search" class="form-control" />
-        <label class="form-label" for="cityname"></label>
-      </div>
-      <button id="search-btn" type="button" class="btn btn-primary">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
+  </section>
+  <section id="Important Links">
+    <h1 class="Important">Important Links</h1>
+    <a href="https://discord.gg/QGhGWqUMtq">https://discord.gg/QGhGWqUMtq</a>
+    <br>
+    <a href="https://t.me/joinchat/gkbQ8ivqSH04ODBl">https://t.me/joinchat/gkbQ8ivqSH04ODBl</a>
   </section>
   <script>
     let cityname = "";
@@ -95,3 +98,6 @@
 </body>
 
 </html>
+
+
+

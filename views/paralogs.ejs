@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+
+
+<h1 class="heading">Parameters</h1>
+<table class="table">
+    <tr class="tableheading">
+      <td>Date</td>
+      <td>Time</td>
+      <td>Pulse</td>
+      <td>SpO2</td>
+      <td>Temperature</td>
+      <td>Pressure</td>
+    </tr>
+    <%  logs.forEach(function(objs) {%>
+    <tr>
+      <td><%= objs.date %></td>
+      <td><%= objs.time %></td>
+      <td><%= objs.pulse %></td>
+      <td><%= objs.oxygen %></td>
+      <td><%= objs.temp %></td>
+      <td><%= objs.pressure %></td>
+    </tr>
+    <% }) %>
+    
+</table>
+
+<button onclick="window.location.href = '/home' " class="submit btn btn-dark " type="submit" name="button">Back</button>
