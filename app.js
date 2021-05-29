@@ -1,10 +1,15 @@
 const express = require("express");
+const PORT= process.env.port || 3000;
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+require('./db/conn');
+
 
 mongoose.connect('mongodb+srv://sghosh:rick@1234@cluster0.4syv0.mongodb.net/mernstack?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
+
+const Register= require("./models/registers");
 const MedSchema = new mongoose.Schema({
     title : String,
     content : String
@@ -37,9 +42,56 @@ app.get("/login", function(req, res)
     res.sendFile(__dirname + "/HTML/covicheck-main/login.html");
 });
 
+app.post("/login", async function(req, res)
+{
+    try{
+        const email= req.body.email;
+        const password  = req.body.password;
+        const useremail= await Register.findOne({email:email});
+        if(useremail.password=== password){
+            res.status(201).sendFile(__dirname + "/HTML/covicheck-main/welcome.html");
+        }
+        else
+        {
+            res.send("Passwords do not match. Try again");
+        }
+
+    }
+    catch(err){
+        res.status(400).send("Invalid Email");
+    }
+});
+
+
 app.get("/signup", function(req, res)
 {
     res.sendFile(__dirname + "/HTML/covicheck-main/signup.html");
+});
+
+app.post("/signup", async function(req, res)
+{
+    try{
+        const password= req.body.password;
+        const cpassword=req.body.cpassword;
+        if(password===cpassword){
+            const User= new Register({
+                name: req.body.name,
+                email: req.body.email,
+                password: req.body.password,
+                cpassword: req.body.cpassword
+            })
+        const registered= await User.save();
+        res.status(201).sendFile(__dirname + "/HTML/covicheck-main/index.html");
+        }
+        else{
+            res.send("Passwords do not match");
+        }
+    
+
+    }
+    catch(err){
+        res.status(400).send(err);
+    }
 });
 
         // <-!     main page     ->
@@ -100,6 +152,6 @@ app.post("/compose", function(req, res){
     res.redirect("/home");
 });
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
     console.log("Server started on port 3000");
   });
