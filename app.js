@@ -3,6 +3,7 @@ const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
+
 mongoose.connect('mongodb+srv://sghosh:rick@1234@cluster0.4syv0.mongodb.net/mernstack?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const MedSchema = new mongoose.Schema({
@@ -10,14 +11,23 @@ const MedSchema = new mongoose.Schema({
     content : String
 });
 
+const ParaSchema = new mongoose.Schema({
+    date:String,
+    time:String,
+    pulse:Number,
+    oxygen:Number,
+    temp:Number,
+    pressure:Number
+});
+    // MongoDB models
 const Med = mongoose.model('Medicine', MedSchema);
+const Para = mongoose.model('Parameters', ParaSchema);
+
 
 let MedPosts = [];
+let Parameters = [];
 
 
-
-const medicineName = "Paracitamol";
-const time = "10:10";
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -51,20 +61,40 @@ app.get("/parameter" ,function(req ,res){
     res.sendFile(__dirname + "/HTML/covicheck-main/parameters.html");
 });
 
-app.post("/parameter", function(req, res){
-    const param= {
-      date:req.body.date,
-      time:req.body.time,
-      pulse: req.body.pulse,
-      oxygen: req.body.O2,
-      temp:req.body.temp,
-      pressure:req.body.pressure
-    };
 
-    console.log(param.date,param.time,param.pulse,param.oxygen,param.temp,param.pressure);
-    res.redirect("/home");
+app.get("/logs",function(req ,res){
+
+    Para.find(function(err,logs){
+        if(err){
+            console.log(err);
+        }
+        else
+        {
+            console.log(logs);
+            res.render("paralogs",{
+                logs : logs
+                });
+        };
+    });
 });
 
+
+
+
+
+app.post("/parameter", function(req, res){
+    const param= new Para({
+      date: req.body.date,
+      time: req.body.time,
+      pulse: req.body.pulse,
+      oxygen: req.body.O2,
+      temp: req.body.temp,
+      pressure: req.body.pressure
+    });
+    param.save().then(() => console.log("Parameters added successfully"));
+    // console.log(param.date,param.time,param.pulse,param.oxygen,param.temp,param.pressure);
+    res.redirect("/logs");
+});
 
 
 app.get("/home" ,function(req ,res){
@@ -76,7 +106,7 @@ app.get("/home" ,function(req ,res){
         else
         {
             MedPosts = Posts;
-            console.log(MedPosts);
+            // console.log(MedPosts);
             res.render("home",{
                 MedPosts: MedPosts
                 });
@@ -95,8 +125,8 @@ app.post("/compose", function(req, res){
       title: req.body.medicineName,
       content: req.body.time
     });
-    console.log(post.title,post.content);
-    post.save().then(() => console.log("waaaooowww"));
+    // console.log(post.title,post.content);
+    post.save().then(() => console.log("Medicines added successfully"));
     res.redirect("/home");
 });
 
