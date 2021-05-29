@@ -28,7 +28,7 @@
       <div class="signup-content row">
         <div class="signup-form col-lg-6">
           <h2 class="form-title">Sign up</h2>
-          <form class="registration-form" method="post">
+          <form class="registration-form" action="/signup" method="POST">
             <div class="form-group">
               <label for="name">
                 <!-- icon -->
@@ -45,15 +45,15 @@
               <label for="password">
                 <!-- icon -->
               </label>
-              <input class="input-box" type="password" name="password" placeholder="Password">
+              <input class="input-box" type="text" name="password" placeholder="Password">
             </div>
             <div class="form-group">
               <label for="con-password">
                 <!-- icon -->
               </label>
-              <input class="input-box" type="password" name="con-password" placeholder="Confirm Password">
+              <input class="input-box" type="text" name="cpassword" placeholder="Confirm Password">
             </div>
-            <div class="form-group Remember-me">
+            <div class="form-group">
               <input type="checkbox" name="agree-term">
               <label for="agree-term">
                 <span><span></span></span>
@@ -64,8 +64,7 @@
 
             </div>  -->
             <div class="form-group form-button">
-              <!-- <input href="/welcome" type="submit" name="signup" id="signup" class="form-submit" value="Register"> -->
-              <a href="/welcome" class="btn btn-dark btn-lg" type="button">Register</a>
+              <input type="submit" name="signup" id="signup" class="form-submit" value="Register">
             </div>
           </form>
         </div>
