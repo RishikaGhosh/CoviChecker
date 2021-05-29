@@ -11,11 +11,11 @@ app.use(express.static("public"));
 
 app.use(express.static( __dirname + '/HTML/covicheck-main' ));
 
-
+        // <-!    intro page     ->
 app.get("/", function(req, res){
     res.sendFile(__dirname + "/HTML/covicheck-main/index.html");
   });
-
+        // <-!     auth part     ->
 app.get("/login", function(req, res)
 {
     res.sendFile(__dirname + "/HTML/covicheck-main/login.html");
@@ -26,13 +26,27 @@ app.get("/signup", function(req, res)
     res.sendFile(__dirname + "/HTML/covicheck-main/signup.html");
 });
 
+        // <-!     main page     ->
+app.get("/welcome" ,function(req ,res){
+    res.sendFile(__dirname + "/HTML/covicheck-main/welcome.html");
+});
 
-//app.get("/auth", function(req, res){
-//    res.sendFile(__dirname + "/HTML/index.html");
-//});
+app.get("/parameter" ,function(req ,res){
+    res.sendFile(__dirname + "/HTML/covicheck-main/parameters.html");
+});
 
-app.get("/home" ,function(req ,res){
-    res.render("home");
+app.post("/parameter", function(req, res){
+    const param= {
+      date:req.body.date,
+      time:req.body.time,
+      pulse: req.body.pulse,
+      oxygen: req.body.O2,
+      temp:req.body.temp,
+      pressure:req.body.pressure
+    };
+
+    console.log(param.date,param.time,param.pulse,param.oxygen,param.temp,param.pressure);
+    res.redirect("/home");
 });
 
 app.get("/compose" ,function(req ,res){
@@ -46,7 +60,7 @@ app.post("/compose", function(req, res){
     };
 
     console.log(post.title,post.content);
-    res.redirect("/");
+    res.redirect("/home");
 });
 
 app.listen(3000, function() {
