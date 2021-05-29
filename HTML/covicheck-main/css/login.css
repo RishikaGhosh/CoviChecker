@@ -4,6 +4,8 @@ body{
 .signupimage{
   width:294px;
   height: 314;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .signup-content{
   border-radius: 25px;
@@ -11,11 +13,29 @@ body{
               0 2px 2px rgba(0,0,0,0.15),
               0 4px 4px rgba(0,0,0,0.15),
               0 8px 8px rgba(0,0,0,0.15);
-  margin-top:150px;
+  margin-top:100px;
   background-color: #fff;
 }
 .input-box{
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
+  width:400px;
+}
+.signup-form{
+  text-align: center;
+  padding-top: 65px;
+}
+.signupimage{
+  width: 400px;
+  height: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.form-title{
+  font-size: 3rem;
+  padding-bottom: 30px;
+}
+.Remember-me{
+  padding-top: 20px;
 }
