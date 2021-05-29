@@ -64,16 +64,16 @@
         <input id="cityname" type="text" class="validate">
         <label for="cityname"><i class="fas fa-search"></i>Enter your city name</label><br>
       </div>
-      <button id="search" type="button" class="btn btn-dark ">search</button>
+      <button id="search-btn" type="button" class="btn btn-dark ">search</button>
     </div>
   </section>
-  <script type="text/javascript">
+  <script>
     let cityname = "";
     let url = "";
 
 
-    let button = document.getElementById("search").onclick = function() {
-      city = document.getElementById("cityname").value;
+    let button = document.getElementById("search-btn").onclick = function() {
+      cityname = document.getElementById("cityname").value;
       url = "https://twitter.com/search?q=verified+" + cityname + "+%28bed+OR+beds+OR+icu+OR+oxygen+OR+ventilator+OR+ventilators+OR+fabiflu%29+-%22not+verified%22+-%22unverified%22+-%22needed%22+-%22required%22&f=live";
 
       //console.log(url)
