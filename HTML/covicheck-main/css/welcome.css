@@ -1,0 +1,68 @@
+#title{
+  background-color: #E9EAF7;
+}
+/* Navbar */
+.navbar-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:300;
+}
+.btn{
+  margin-right: 30px;
+}
+.content{
+  margin-left: 960px;
+}
+.ncontent{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.n-resources{
+  margin-left: 0px;
+}
+/* Main Title */
+h1{
+  font-size: 100px;
+  padding-left: 100px;
+  padding-top: 100px;
+  font-family:'Montserrat',sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+
+}
+/* images */
+.doctor-images1{
+  width: 200px;
+  height: 300px;
+  margin-bottom: 50px;
+}
+.doctor-images2{
+  width: 200px;
+  height: 300px;
+}
+.doctor-images3{
+  width: 200px;
+  height: 300px;
+  padding-left: 100px;
+  padding-bottom: 25px;
+}
+.images{
+  margin-left: 750px;
+  margin-top: 30px;
+}
+/* button */
+.btn-dark{
+  margin-left: 115px;
+  margin-top:10px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+/* footer */
+ #footer{
+  background-color: #fff;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.social-icon{
+  padding: 1%;
+}
