@@ -52,9 +52,9 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <!-- //<form class="form-inline my-2 my-lg-0"> -->
             <a href="signup&loginpage/signup.html" class="btn btn-outline-light btn-lg" type="button">Get Started</a>
-          </form>
+          <!-- //</form> -->
         </div>
       </nav>
     </div>
@@ -65,10 +65,9 @@
       <h1 >Log Your Symptoms.</h1>
     </div>
     <!-- <input class="datetime" type="datetime-local" value="2021-05-29T13:00"> -->
-
-    <input class="datetime" type="date" min="2017-08-15" max="2018-08-26" step="7" name="date"> <input class="time" type="time" value="13:00" step="900" name="time">
-    
-
+    <form action="/parameter" method="post">
+      <input class="datetime" type="date" step="7" name="date"> <input class="time" type="time" name="time">
+    <!-- </form> -->
     <br>
     <div class="row">
       <div class=" price-sec">
@@ -76,11 +75,11 @@
           <div class="card-body">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/activity.png" />
             <h5 class="card-title">Pulse</h5>
-            <form>
+            <!-- <form action="/parameter" method="post"> -->
 
               <input type="number" id="fname" name="pulse"><br>
 
-            </form>
+            <!-- </form> -->
           </div>
         </div>
       </div>
@@ -89,9 +88,9 @@
           <div class="card-body">
             <img src="https://img.icons8.com/metro/26/000000/oxygen.png" />
             <h5 class="card-title">Oxygen Level</h5>
-            <form>
+            <!-- <form action="/parameter" method="post"> -->
               <input type="number" id="fname" name="O2"><br>
-            </form>
+            <!-- </form> -->
           </div>
         </div>
       </div>
@@ -100,9 +99,9 @@
           <div class="card-body">
             <img src="https://img.icons8.com/windows/32/000000/temperature-low.png" />
             <h5 class="card-title">Temperature</h5>
-            <form>
+            <!-- <form action="/parameter" method="post"> -->
               <input type="number" id="fname" name="temp"><br>
-            </form>
+            <!-- </form> -->
           </div>
         </div>
       </div>
@@ -111,8 +110,10 @@
           <div class="card-body">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/pressure.png" />
             <h5 class="card-title ">Pressure</h5>
-            <form>
+            <!-- <form action="/parameter" method="post"> -->
               <input type="number" id="fname" name="pressure"><br>
+            <button href="#" class="submit btn btn-dark " type="submit" name="button">Submit</button>
+
             </form>
           </div>
         </div>
@@ -122,7 +123,7 @@
       <label>Other Symptoms</label><br>
       <textarea name="" rows="10" cols="30"></textarea>
     </div> -->
-  <a href="#" class="submit btn btn-dark ">Submit</a>
+  
   </section>
 
 </body>
