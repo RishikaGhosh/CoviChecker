@@ -11,6 +11,11 @@ In this pandemic, majority of the covid positive patients are  isolated in their
 * Resources fetcher which displays the verified resources from Twitter based upon the city of the user.
 * Community page for the users to interact
 * Chat-bot to improve the mood of isolated patients.
+# Future work
+* Analysis of user data.
+* Create a mobile application of the same.
+* Different portals for users and doctors to make their interaction more efficient.
+* Integrate it with Google Assistant.
 # Technology Stack
 <a href="https://www.w3.org/TR/html5/" title="HTML5"><img src="https://github.com/get-icon/geticon/raw/master/icons/html-5.svg" alt="HTML5" width="50px" height="50px"></a>
 <a href="https://www.w3.org/TR/CSS/" title="CSS3"><img src="https://github.com/get-icon/geticon/raw/master/icons/css-3.svg" alt="CSS3" width="50px" height="50px"></a> 
